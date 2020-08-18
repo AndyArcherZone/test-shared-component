@@ -57,11 +57,10 @@ const config = (env, argv) => {
             extensions: ['.js', '.jsx'],
         },
         plugins: [
-            new HtmlWebpackPlugin({
+            ...(isProduction ? [] : [new HtmlWebpackPlugin({
                 appMountId: 'root',
                 filename: '/static/index.html'
-            }),
-            new MiniCssExtractPlugin(),
+            }), new MiniCssExtractPlugin(),]),
             new CleanWebpackPlugin()
         ],
         externals: isProduction ? {
