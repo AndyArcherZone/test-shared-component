@@ -1,0 +1,7 @@
+$primary: #333;
+$secondary: #999;
+$text: #fff;
+
+@import 'module/header';
+
+@include create-custom-header($primary, $secondary, $text)

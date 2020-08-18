@@ -1,0 +1,23 @@
+@mixin create-custom-header($primary, $secondary, $text) {
+  .custom-header-module {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $primary;
+    color: $text;
+    padding: 20px 0;
+    
+    * {
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: $secondary;
+      padding: 10px 15px;
+      border: 0;
+      text-transform: uppercase;
+    }
+  }
+}
